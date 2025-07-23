@@ -3,3 +3,5 @@ gunicorn
 psycopg2-binary
 whitenoise
 django-environ
+django-tinymce
+dj-database-url
