@@ -1,0 +1,69 @@
+{% load i18n %}
+
+<div class="sidebar">
+    <div class="sidebar-section">
+        <h3>{% trans "Posts Recientes" %}</h3>
+        <ul>
+            {% for post in recent_posts %}
+                <li><a href="{% url 'detalle_post' post.id %}">{{ post.titulo }}</a></li>
+            {% empty %}
+                <li>{% trans "No hay posts recientes." %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-section mt-4">
+        <h3>{% trans "Posts Fijados" %}</h3>
+        <ul>
+            {% for post in pinned_posts %}
+                <li><a href="{% url 'detalle_post' post.id %}">{{ post.titulo }}</a></li>
+            {% empty %}
+                <li>{% trans "No hay posts fijados." %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-section mt-4">
+        <h3>{% trans "Posts Populares" %}</h3>
+        <ul>
+            {% for post in popular_posts %}
+                <li><a href="{% url 'detalle_post' post.id %}">{{ post.titulo }}</a></li>
+            {% empty %}
+                <li>{% trans "No hay posts populares." %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-section mt-4">
+        <h3>{% trans "Sígueme" %}</h3>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="https://github.com/CodeByJesus" target="_blank" title="GitHub">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sidebar-section mt-4">
+        <h3>{% trans "Categorías" %}</h3>
+        <ul>
+            {% for category in categories %}
+                <li><a href="{% url 'posts_by_category' category.slug %}">{{ category.name }}</a></li>
+            {% empty %}
+                <li>{% trans "No hay categorías." %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-section mt-4">
+        <h3>{% trans "Etiquetas" %}</h3>
+        <div class="d-flex flex-wrap">
+            {% for tag in tags %}
+                <a href="{% url 'posts_by_tag' tag.slug %}" class="badge bg-info me-1 mb-1">{{ tag.name }}</a>
+            {% empty %}
+                <p>{% trans "No hay etiquetas." %}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Crear Nuevo Post" %}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-dark text-white border-info">
+                <div class="card-header bg-info text-dark">
+                    <h2 class="text-center">{% trans "Crear Nuevo Post" %}</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.media }} {# Para que TinyMCE funcione #}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary w-100">{% trans "Guardar Post" %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

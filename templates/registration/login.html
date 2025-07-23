@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Iniciar Sesión" %}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card bg-dark text-white border-info">
+                <div class="card-header bg-info text-dark">
+                    <h2 class="text-center">{% trans "Iniciar Sesión" %}</h2>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                        <ul class="messages list-unstyled">
+                            {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }} text-center text-danger mb-3"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary w-100">{% trans "Login" %}</button>
+                    </form>
+                    <p class="text-center mt-3">
+                        <a href="{% url 'password_reset' %}" class="text-info">{% trans "¿Olvidaste tu contraseña?" %}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

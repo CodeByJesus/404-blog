@@ -1,0 +1,372 @@
+/* static/css/styles.css */
+
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: 'Space Mono', monospace; /* Fuente ciberpunk */
+    color: #e0e0e0; /* Color de texto base, puede ajustarse */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* Fondo de ciudad futurista */
+    background-image: url('../img/Cyberpunk city sci-fi cityscape.gif'); /* GIF de fondo */
+    background-size: cover; /* Cubre todo el área */
+    background-position: center; /* Centra la imagen */
+    background-attachment: scroll; /* La imagen se desplaza con el scroll */
+    background-color: #0a0a1a; /* Color de respaldo si la imagen no carga */
+    
+    /* Superposición oscura para que el texto sea legible */
+    position: relative; /* Necesario para el pseudo-elemento de superposición */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Capa oscura semi-transparente */
+    z-index: -1; /* Detrás del contenido, pero encima de la imagen */
+}
+
+/* Ajustes para el canvas de estrellas (ahora será una capa de efecto) */
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Ahora va detrás de la superposición oscura */
+    background: none; /* Ya no necesitamos el degradado aquí */
+}
+
+/* Contenedor principal del contenido */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(10, 10, 20, 0.8); /* Fondo más oscuro y sólido para el contenido */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Sombra con color neón cian */
+    flex-grow: 1;
+    border: 1px solid rgba(0, 255, 255, 0.2); /* Borde sutil neón */
+}
+
+/* Estilos para el título principal del blog (404/) */
+h1 {
+    /* Mantener los estilos de glitch */
+    color: #00ff00; /* Verde neón */
+    font-size: 5em; /* Aumentado para que sea más grande */
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    animation: glitch-flicker 3s infinite alternate;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em; /* Tamaño de fuente para títulos de posts */
+    color: #00ffff; /* Cian neón para títulos de posts */
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    animation: glitch-flicker 3s infinite alternate;
+}
+
+h1::before, h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ff00ff; /* Magenta */
+    text-shadow: -4px 0 #ff00ff, 4px 0 #00ffff; /* Añadir doble sombra para más efecto */
+    clip: rect(0px, 9999px, 20px, 0);
+    animation: glitch-anim-1 4s infinite alternate-reverse;
+}
+
+h1::after, h2::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #00ffff; /* Cian */
+    text-shadow: 4px 0 #00ffff, -4px 0 #ff00ff; /* Añadir doble sombra para más efecto */
+    clip: rect(40px, 9999px, 60px, 0);
+    animation: glitch-anim-2 6s infinite alternate;
+}
+
+/* Animación principal de parpadeo */
+@keyframes glitch-flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Animación para la primera capa de glitch */
+@keyframes glitch-anim-1 {
+    0% {
+        clip: rect(0px, 9999px, 20px, 0);
+        transform: skewX(15deg);
+    }
+    10% {
+        clip: rect(40px, 9999px, 60px, 0);
+        transform: skewX(0deg);
+    }
+    20% {
+        clip: rect(80px, 9999px, 100px, 0);
+        transform: skewX(-15deg);
+    }
+    30% {
+        clip: rect(20px, 9999px, 40px, 0);
+        transform: skewX(0deg);
+    }
+    40% {
+        clip: rect(60px, 9999px, 80px, 0);
+        transform: skewX(10deg);
+    }
+    50% {
+        clip: rect(10px, 9999px, 30px, 0);
+        transform: skewX(-10deg);
+    }
+    60% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: skewX(5deg);
+    }
+    70% {
+        clip: rect(90px, 9999px, 110px, 0);
+        transform: skewX(-5deg);
+    }
+    80% {
+        clip: rect(30px, 9999px, 50px, 0);
+        transform: skewX(12deg);
+    }
+    90% {
+        clip: rect(70px, 9999px, 90px, 0);
+        transform: skewX(-12deg);
+    }
+    100% {
+        clip: rect(0px, 9999px, 20px, 0);
+        transform: skewX(0deg);
+    }
+}
+
+/* Animación para la segunda capa de glitch */
+@keyframes glitch-anim-2 {
+    0% {
+        clip: rect(40px, 9999px, 60px, 0);
+        transform: skewX(-15deg);
+    }
+    10% {
+        clip: rect(80px, 9999px, 100px, 0);
+        transform: skewX(0deg);
+    }
+    20% {
+        clip: rect(0px, 9999px, 20px, 0);
+        transform: skewX(15deg);
+    }
+    30% {
+        clip: rect(60px, 9999px, 80px, 0);
+        transform: skewX(0deg);
+    }
+    40% {
+        clip: rect(20px, 9999px, 40px, 0);
+        transform: skewX(-10deg);
+    }
+    50% {
+        clip: rect(70px, 9999px, 90px, 0);
+        transform: skewX(10deg);
+    }
+    60% {
+        clip: rect(10px, 9999px, 30px, 0);
+        transform: skewX(-5deg);
+    }
+    70% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: skewX(5deg);
+    }
+    80% {
+        clip: rect(90px, 9999px, 110px, 0);
+        transform: skewX(-12deg);
+    }
+    90% {
+        clip: rect(30px, 9999px, 50px, 0);
+        transform: skewX(12deg);
+    }
+    100% {
+        clip: rect(40px, 9999px, 60px, 0);
+        transform: skewX(0deg);
+    }
+}
+
+/* Estilos para los posts individuales en la lista */
+.post {
+    background-color: rgba(20, 20, 40, 0.3); /* Fondo más oscuro para los posts, más transparente */
+    border: 1px solid rgba(0, 255, 255, 0.05); /* Borde neón cian, más tenue */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.05); /* Sombra neón, más sutil */
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post h2 a {
+    color: #00ffff; /* Cian neón para títulos de posts */
+}
+
+.post .meta {
+    color: #aaa;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #0a0a1a;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+    color: #888;
+}
+
+/* Estilos para el selector de idioma */
+.form-select-sm {
+    background-color: #1a1a2e;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+}
+
+/* Estilos para la página de detalle del post */
+.contenido-post {
+    color: #e0e0e0;
+}
+
+/* Estilos para la sección de comentarios */
+.comment {
+    background-color: rgba(20, 20, 40, 0.6);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.comment strong {
+    color: #00ffff;
+}
+
+.comment small {
+    color: #999;
+}
+
+/* Estilos para el formulario de comentarios */
+.comment-form label {
+    color: #00ffff;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    background-color: #1a1a2e;
+    border: 1px solid #00ffff;
+    color: #e0e0e0;
+}
+
+.comment-form input[type="text"]::placeholder,
+.comment-form textarea::placeholder {
+    color: #777;
+}
+
+.comment-form button {
+    background-color: #ff00ff;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.comment-form button:hover {
+    background-color: #cc00cc;
+    border-color: #cc00cc;
+}
+
+/* Estilos para el enlace "Volver a la lista de posts" */
+.container > p > a {
+    color: #00ffff;
+}
+
+/* Estilos para los campos de formulario */
+.card-body input[type="text"],
+.card-body input[type="password"],
+.card-body input[type="email"] {
+    background-color: rgba(20, 20, 40, 0.5); /* Fondo oscuro semi-transparente */
+    border: 1px solid rgba(0, 255, 255, 0.3); /* Borde cian neón */
+    color: #e0e0e0; /* Color de texto claro */
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    margin-bottom: 1rem; /* Espacio entre campos */
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Sombra neón sutil */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-body input[type="text"]:focus,
+.card-body input[type="password"]:focus,
+.card-body input[type="email"]:focus {
+    border-color: #ff00ff; /* Borde magenta neón al enfocar */
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.4); /* Sombra magenta neón al enfocar */
+    outline: none; /* Eliminar el contorno por defecto del navegador */
+}
+
+.card-body label {
+    color: #00ffff; /* Color cian neón para las etiquetas */
+    margin-bottom: 0.5rem;
+    display: block; /* Para que la etiqueta ocupe su propia línea */
+}
+
+/* Estilos para los mensajes de error del formulario */
+.errorlist {
+    color: #ff0000; /* Rojo neón para errores */
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.errorlist li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    background-color: rgba(10, 10, 20, 0.7); /* Fondo oscuro semi-transparente */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón cian */
+    border: 1px solid rgba(0, 255, 255, 0.15); /* Borde sutil neón */
+}
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+    color: #00ffff; /* Cian neón para títulos de sección */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.5); /* Subrayado neón */
+    padding-bottom: 5px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-section ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-section ul li a {
+    color: #e0e0e0; /* Color de texto para enlaces de posts */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar-section ul li a:hover {
+    color: #ff00ff; /* Magenta neón al pasar el ratón */
+    text-decoration: underline;
+}
