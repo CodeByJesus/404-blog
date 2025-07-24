@@ -1,0 +1,35 @@
+Starting Container
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+ 
+Error: '$PORT' is not a valid port number.
+ 
+

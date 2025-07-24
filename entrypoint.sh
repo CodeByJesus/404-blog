@@ -15,4 +15,15 @@ python manage.py migrate
 echo "Iniciando Gunicorn..."
 # Ignora el comando pasado y ejecuta gunicorn directamente,
 # usando la variable de entorno PORT que proporcionan plataformas como Railway/Render.
-exec gunicorn mi_blog.wsgi:application --bind 0.0.0.0:${PORT:-8000}
+# Iniciar el servidor Gunicorn
+echo "Iniciando Gunicorn..."
+
+# Validar y establecer la variable PORT
+if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
+  echo "Advertencia: La variable PORT no es un número válido o está vacía. Usando el puerto por defecto 8000."
+  PORT=8000
+fi
+
+# Ignora el comando pasado y ejecuta gunicorn directamente,
+# usando la variable de entorno PORT que proporcionan plataformas como Railway/Render.
+exec gunicorn mi_blog.wsgi:application --bind 0.0.0.0:$PORT
