@@ -13,4 +13,6 @@ python manage.py migrate
 
 # Iniciar el servidor Gunicorn
 echo "Iniciando Gunicorn..."
-exec "$@"
+# Ignora el comando pasado y ejecuta gunicorn directamente,
+# usando la variable de entorno PORT que proporcionan plataformas como Railway/Render.
+exec gunicorn mi_blog.wsgi:application --bind 0.0.0.0:${PORT:-8000}

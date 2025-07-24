@@ -42,4 +42,4 @@ ENTRYPOINT ["/app/entrypoint.sh"]
 # El entrypoint lo ejecutará con `exec "$@"`.
 # Escucha en el puerto proporcionado por la variable de entorno PORT, con 8000 como valor por defecto.
 # Se usa la forma "shell" de CMD para que la variable $PORT se expanda correctamente.
-CMD gunicorn mi_blog.wsgi:application --bind 0.0.0.0:${PORT:-8000}
+CMD []
