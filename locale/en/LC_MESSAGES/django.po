@@ -1244,7 +1244,7 @@ msgstr ""
 
 #: posts/templates/html/detalle_de_post.html:5
 msgid "Destalle del post"
-msgstr ""
+msgstr "Post Detail"
 
 #: posts/templates/html/detalle_de_post.html:27
 #: posts/templates/html/detalle_post.html:11
@@ -1254,16 +1254,16 @@ msgstr "Written by"
 
 #: posts/templates/html/detalle_de_post.html:27
 msgid "El"
-msgstr ""
+msgstr "on"
 
 #: posts/templates/html/detalle_de_post.html:32
 #: posts/templates/html/detalle_post.html:65
 msgid "Volver a la lista de posts"
-msgstr ""
+msgstr "Back to post list"
 
 #: posts/templates/html/detalle_post.html:5
 msgid "Detalle del Post"
-msgstr ""
+msgstr "Post Detail"
 
 #: posts/templates/html/detalle_post.html:11
 #: posts/templates/html/lista_de_posts.html:17
@@ -1272,31 +1272,31 @@ msgstr "on"
 
 #: posts/templates/html/detalle_post.html:13
 msgid "← Volver a la lista de posts"
-msgstr ""
+msgstr "← Back to post list"
 
 #: posts/templates/html/detalle_post.html:23
 msgid "Etiquetas:"
-msgstr ""
+msgstr "Tags:"
 
 #: posts/templates/html/detalle_post.html:32
 msgid "Galería de Imágenes"
-msgstr ""
+msgstr "Image Gallery"
 
 #: posts/templates/html/detalle_post.html:45
 msgid "Comentarios"
-msgstr ""
+msgstr "Comments"
 
 #: posts/templates/html/detalle_post.html:52
 msgid "Aún no hay comentarios."
-msgstr ""
+msgstr "No comments yet."
 
 #: posts/templates/html/detalle_post.html:56
 msgid "Añadir un comentario"
-msgstr ""
+msgstr "Add a comment"
 
 #: posts/templates/html/detalle_post.html:60
 msgid "Enviar comentario"
-msgstr ""
+msgstr "Submit comment"
 
 #: posts/templates/html/lista_de_posts.html:29
 msgid "No hay publicaciones disponibles."
@@ -1305,96 +1305,94 @@ msgstr "No posts are available."
 #: posts/templates/html/lista_de_posts.html:37
 #: posts/templates/html/lista_de_posts.html:41
 msgid "Anterior"
-msgstr ""
+msgstr "Previous"
 
 #: posts/templates/html/lista_de_posts.html:55
 #: posts/templates/html/lista_de_posts.html:59
 msgid "Siguiente"
-msgstr ""
+msgstr "Next"
 
 #: posts/templates/html/post_form.html:4 posts/templates/html/post_form.html:12
 msgid "Crear Nuevo Post"
-msgstr ""
+msgstr "Create New Post"
 
 #: posts/templates/html/post_form.html:19
 msgid "Guardar Post"
-msgstr ""
+msgstr "Save Post"
 
 #: posts/templates/html/sidebar.html:5
 msgid "Posts Recientes"
-msgstr ""
+msgstr "Recent Posts"
 
 #: posts/templates/html/sidebar.html:10
 msgid "No hay posts recientes."
-msgstr ""
+msgstr "No recent posts."
 
 #: posts/templates/html/sidebar.html:16
 msgid "Posts Fijados"
-msgstr ""
+msgstr "Pinned Posts"
 
 #: posts/templates/html/sidebar.html:21
 msgid "No hay posts fijados."
-msgstr ""
+msgstr "No pinned posts."
 
 #: posts/templates/html/sidebar.html:27
 msgid "Posts Populares"
-msgstr ""
+msgstr "Popular Posts"
 
 #: posts/templates/html/sidebar.html:32
-#, fuzzy
-#| msgid "No hay publicaciones disponibles."
 msgid "No hay posts populares."
-msgstr "No posts are available."
+msgstr "No popular posts."
 
 #: posts/templates/html/sidebar.html:38
 msgid "Sígueme"
-msgstr ""
+msgstr "Follow Me"
 
 #: posts/templates/html/sidebar.html:49
 msgid "Categorías"
-msgstr ""
+msgstr "Categories"
 
 #: posts/templates/html/sidebar.html:54
 msgid "No hay categorías."
-msgstr ""
+msgstr "No categories."
 
 #: posts/templates/html/sidebar.html:60
 msgid "Etiquetas"
-msgstr ""
+msgstr "Tags"
 
 #: posts/templates/html/sidebar.html:65
 msgid "No hay etiquetas."
-msgstr ""
+msgstr "No tags."
 
 #: templates/base.html:28
 msgid "Buscar posts..."
-msgstr ""
+msgstr "Search posts..."
 
 #: templates/base.html:29
 msgid "Buscar"
-msgstr ""
+msgstr "Search"
 
 #: templates/base.html:46
 msgid "Hola,"
-msgstr ""
+msgstr "Hello,"
 
 #: templates/base.html:48
 msgid "Crear Post"
-msgstr ""
+msgstr "Create Post"
 
 #: templates/base.html:52
 msgid "Cerrar Sesión"
-msgstr ""
+msgstr "Log Out"
 
 #: templates/base.html:68 templates/registration/login.html:4
 #: templates/registration/login.html:12
 msgid "Iniciar Sesión"
-msgstr ""
+msgstr "Log In"
 
 #: templates/base.html:69 templates/registration/signup.html:4
 #: templates/registration/signup.html:12 templates/registration/signup.html:18
 msgid "Registrarse"
-msgstr ""
+msgstr "Sign Up"
 
 #: templates/registration/login.html:25
 msgid "Login"
@@ -1402,44 +1400,44 @@ msgstr ""
 
 #: templates/registration/login.html:28
 msgid "¿Olvidaste tu contraseña?"
-msgstr ""
+msgstr "Forgot your password?"
 
 #: templates/registration/password_reset_admin_only.html:4
 #: templates/registration/password_reset_admin_only.html:12
 msgid "Restablecer Contraseña"
-msgstr ""
+msgstr "Reset Password"
 
 #: templates/registration/password_reset_admin_only.html:15
 msgid ""
 "Para restablecer tu contraseña, por favor contacta al administrador del "
 "sitio."
-msgstr ""
+msgstr "To reset your password, please contact the site administrator."
 
 #: templates/registration/password_reset_admin_only.html:16
 msgid "Él te ayudará lo más rápido posible."
-msgstr ""
+msgstr "They will help you as soon as possible."
 
 #: templates/registration/password_reset_admin_only.html:18
 #: templates/registration/password_reset_done.html:18
 msgid "Volver al Inicio de Sesión"
-msgstr ""
+msgstr "Back to Log In"
 
 #: templates/registration/password_reset_done.html:4
 msgid "Restablecer Contraseña Enviado"
-msgstr ""
+msgstr "Password Reset Sent"
 
 #: templates/registration/password_reset_done.html:12
 msgid "Solicitud Enviada"
-msgstr ""
+msgstr "Request Sent"
 
 #: templates/registration/password_reset_done.html:15
 msgid "Hemos recibido tu solicitud para restablecer la contraseña."
-msgstr ""
+msgstr "We have received your password reset request."
 
 #: templates/registration/password_reset_done.html:16
 msgid ""
 "Un administrador revisará tu solicitud y te ayudará lo más rápido posible."
-msgstr ""
+msgstr "An administrator will review your request and help you as soon as possible."
 
 #~ msgid "Mi Blog"
 #~ msgstr "My Blog"

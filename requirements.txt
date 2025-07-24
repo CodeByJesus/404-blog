@@ -1,7 +1,9 @@
-Django
-gunicorn
+Django==4.2.23
+gunicorn==23.0.0
 psycopg2-binary
 whitenoise
 django-environ
 django-tinymce
 dj-database-url
+Pillow
+beautifulsoup4

@@ -1,0 +1,28 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Entornos virtuales
+.env
+venv
+env
+
+# Archivos de Python compilados
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Base de datos local
+db.sqlite3*
+
+# Archivos de IDE
+.vscode
+.idea
+
+# Documentación
+README.md
