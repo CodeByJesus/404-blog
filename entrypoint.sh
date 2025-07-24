@@ -26,4 +26,5 @@ fi
 
 # Ignora el comando pasado y ejecuta gunicorn directamente,
 # usando la variable de entorno PORT que proporcionan plataformas como Railway/Render.
-exec gunicorn mi_blog.wsgi:application --bind 0.0.0.0:$PORT
+echo "Valor de PORT recibido: $PORT"
+exit 1 # Salir para que podamos ver el valor en los logs
