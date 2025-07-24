@@ -45,7 +45,7 @@ Sigue estos pasos para configurar y ejecutar el **backend** de este proyecto en 
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone https://github.com/CodeByJesus/Portafolio-jesus.git # Reemplaza con la URL de tu repositorio de blog
+    git clone https://github.com/CodeByJesus/404-blog.git # Reemplaza con la URL de tu repositorio de blog
     cd mi_blog
     ```
 
@@ -88,6 +88,21 @@ Sigue estos pasos para configurar y ejecutar el **backend** de este proyecto en 
 ## 🌐 Despliegue en Producción
 
 La versión pública de este blog utiliza un **frontend estático** generado con Pelican y desplegado en Netlify. Este repositorio sirve como el CMS para gestionar el contenido que luego se exporta a Markdown para el sitio estático.
+
+### Versión Funcional del Blog (Estática)
+
+La versión completamente funcional y accesible públicamente de este blog es la **versión estática**, desplegada en Netlify. Esta versión es extremadamente rápida, segura y económica de mantener.
+
+*   **URL del Blog Estático:** [https://TU_URL_NETLIFY_BLOG.netlify.app](https://TU_URL_NETLIFY_BLOG.netlify.app) (Reemplaza con la URL real de tu blog en Netlify)
+*   **Código Fuente del Frontend Estático:** [https://github.com/CodeByJesus/404-blog-estatico](https://github.com/CodeByJesus/404-blog-estatico)
+
+**Limitaciones de la Versión Estática:**
+Es importante entender que, al ser un sitio estático, esta versión no incluye funcionalidades dinámicas que requieren un backend en tiempo real, como:
+*   Sistema de comentarios.
+*   Funcionalidad de búsqueda en el sitio (a menos que se implemente con JavaScript en el cliente).
+*   Autenticación de usuarios o cualquier interacción con una base de datos en vivo.
+
+Para la gestión de contenido y el desarrollo de estas funcionalidades dinámicas, se debe utilizar la versión backend de este repositorio, ejecutándola localmente.
 
 ## 🌍 Internacionalización (i18n)
 
