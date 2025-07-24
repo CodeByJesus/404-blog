@@ -13,10 +13,6 @@ python manage.py migrate
 
 # Iniciar el servidor Gunicorn
 echo "Iniciando Gunicorn..."
-# Ignora el comando pasado y ejecuta gunicorn directamente,
-# usando la variable de entorno PORT que proporcionan plataformas como Railway/Render.
-# Iniciar el servidor Gunicorn
-echo "Iniciando Gunicorn..."
 
 # Validar y establecer la variable PORT
 if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
@@ -26,5 +22,4 @@ fi
 
 # Ignora el comando pasado y ejecuta gunicorn directamente,
 # usando la variable de entorno PORT que proporcionan plataformas como Railway/Render.
-echo "Valor de PORT recibido: $PORT"
-exit 1 # Salir para que podamos ver el valor en los logs
+exec gunicorn mi_blog.wsgi:application --bind 0.0.0.0:$PORT
