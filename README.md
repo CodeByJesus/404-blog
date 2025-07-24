@@ -93,7 +93,7 @@ La versión pública de este blog utiliza un **frontend estático** generado con
 
 La versión completamente funcional y accesible públicamente de este blog es la **versión estática**, desplegada en Netlify. Esta versión es extremadamente rápida, segura y económica de mantener.
 
-*   **URL del Blog Estático:** [https://TU_URL_NETLIFY_BLOG.netlify.app](https://TU_URL_NETLIFY_BLOG.netlify.app) (Reemplaza con la URL real de tu blog en Netlify)
+*   **URL del Blog Estático:** URL DEL BLOG: [https://404blog.netlify.app/] 
 *   **Código Fuente del Frontend Estático:** [https://github.com/CodeByJesus/404-blog-estatico](https://github.com/CodeByJesus/404-blog-estatico)
 
 **Limitaciones de la Versión Estática:**
