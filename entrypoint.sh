@@ -14,11 +14,8 @@ python manage.py migrate
 # Iniciar el servidor Gunicorn
 echo "Iniciando Gunicorn..."
 
-# Validar y establecer la variable PORT
-if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
-  echo "Advertencia: La variable PORT no es un número válido o está vacía. Usando el puerto por defecto 8000."
-  PORT=8000
-fi
+# Establecer PORT a 8000 si no está definido por el entorno
+PORT="${PORT:-8000}"
 
 # Ignora el comando pasado y ejecuta gunicorn directamente,
 # usando la variable de entorno PORT que proporcionan plataformas como Railway/Render.
